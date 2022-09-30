@@ -123,7 +123,6 @@ export default {
     min-height: 88px;
     background-color: #FFFFFF;
     color:#283747;
-    margin-bottom: 0px;
   }
 
   .footer h2 {
