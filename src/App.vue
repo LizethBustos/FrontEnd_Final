@@ -11,6 +11,7 @@
       <nav v-else> 
         <button @click="loadLogin">Iniciar sesión</button>
         <button @click="loadSignUp">Registrarse</button>
+        <button @click="loadProductos">Productos</button>
       </nav>
     </div>
 
@@ -40,10 +41,13 @@ export default {
   //métodos
   methods: {
     loadLogin: function(){
-      this.$router.push({name:"login"})
+      this.$router.push({name:"Login"})
     },
     loadSignUp: function(){
-      this.$router.push({name:"signup"})
+      this.$router.push({name:"SignUp"})
+    },
+    loadProductos: function(){
+      this.$router.push({name:"Productos"})
     },
     completedLogin: function(data) {
       console.log(data)
@@ -119,6 +123,7 @@ export default {
     min-height: 88px;
     background-color: #FFFFFF;
     color:#283747;
+    margin-bottom: 0px;
   }
 
   .footer h2 {
