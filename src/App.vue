@@ -26,6 +26,7 @@
     </div>
   
   </div>  
+  
 </template>
 
 <script>
@@ -66,21 +67,22 @@ export default {
 
   body {
     font-family: 'Roboto', 'sans serif';
+    background-color: #ffe8cd;
   }
   
   .header {
     width: 100%;
     height: 10vh;
     min-height: 100px;
-    background-color: #FF8000;
-    color: #E5E7E9;
+    background-color: #ffffff;
+    color:#283747;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .header h1{
-    width: 20%;
+    width: 50%;
     text-align: center;
   }
 
@@ -95,9 +97,9 @@ export default {
   }
 
   .header nav button {
-    color:#E5E7E9;
-    background-color:#283747;
-    border:1px solid #E5E7E9;
+    color:#283747;
+    background-color:#ffa333;
+    border:1px solid #ffffff;
     border-radius: 5px;
     padding: 10px 20px;
   }
@@ -115,8 +117,8 @@ export default {
     width: 100%;
     height: 10vh;
     min-height: 88px;
-    background-color: #283747;
-    color:#E5E7E9;
+    background-color: #FFFFFF;
+    color:#283747;
   }
 
   .footer h2 {

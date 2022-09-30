@@ -48,7 +48,6 @@ export default {
 
 </script>
 
-
 <style>
 .login_user{
     height: 100%;
@@ -67,6 +66,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #FFFFFF;
 }
 
 .login_user h2 {
@@ -90,9 +90,9 @@ export default {
 .login_user button {
     width: 100%;
     height: 40px;
-    color:#E5E7E9;
-    background: #283747;
-    border: 1px solid #E5E7E9;
+    color:#283747;
+    background: #FFA333;
+    border: 1px solid #FFFFFF;
 
     border-radius: 5px;
 }
@@ -100,7 +100,7 @@ export default {
 
 .login_user button:hover{
     color:#E5E7E9;
-    background: crimson;
+    background: #c6c6c6;
     border: 1px solid #283747;
 }
 
