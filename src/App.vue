@@ -72,7 +72,7 @@ export default {
     width: 100%;
     height: 10vh;
     min-height: 100px;
-    background-color: #283747;
+    background-color: #FF8000;
     color: #E5E7E9;
     display: flex;
     justify-content: space-between;
