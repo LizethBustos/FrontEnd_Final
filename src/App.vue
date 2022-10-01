@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import { assertLogicalExpression } from '@babel/types'
+
 export default {
   name: 'App',
   data: function() {
@@ -40,6 +42,9 @@ export default {
   },
   //métodos
   methods: {
+    verifyAuth: function(){
+      this.is_auth = localStorage.getItem("isAuth") || false;
+    },
     loadLogin: function(){
       this.$router.push({name:"Login"})
     },
@@ -50,7 +55,12 @@ export default {
       this.$router.push({name:"Productos"})
     },
     completedLogin: function(data) {
-      console.log(data)
+      localStorage.setItem("isAuth", true);
+      localStorage.setItem("username", data.username);
+      localStorage.setItem("token_access", data.token_access);
+      localStorage.setItem("token_refresh", data.token_refresh);
+      alert("Autenticación Exitosa")
+      this.verifyAuth()
     }
 
   },
