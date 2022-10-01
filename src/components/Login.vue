@@ -27,7 +27,7 @@ export default {
     methods:{
         processLoginUser: function(){
             console.log(this.user)
-            //axios.post("login/", this.user, {headers: {}})
+            axios.post("login/", this.user, {headers: {}})
             .then( (res) => {
                 let dataLogin = {
                     username: this.user.username,
