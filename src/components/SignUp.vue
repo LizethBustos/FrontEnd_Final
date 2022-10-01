@@ -9,7 +9,7 @@
                 <br>
                 <input type="text" v-model="user.apellidos" placeholder="Apellido">
                 <br>
-                <input type="text" v-model="user.email" placeholder="e-mail">
+                <input type="email" v-model="user.email" placeholder="e-mail">
                 <br>
                 <input type="password" v-model="user.password" placeholder="Password">
                 <br>
@@ -29,27 +29,25 @@ export default {
                 nombres:"",
                 apellidos:"",
                 email:"",
-                password:""
+                password:""                
             }
         }
     },
     methods:{
         processSignUp: function(){
-            console.log(this.user)
-            //axios.post("login/", this.user, {headers: {}})
+            axios.post("user/", this.user, {headers: {}})
             .then( (res) => {
-                let datasignup = {
+                let dataLogin = {
                     username: this.user.username,
                     token_access: res.data.access,
                     token_refresh: res.data.refresh,
                 }
 
-                this.$emit('completedLogin', datasignup)
+                this.$emit('completedLogin', dataLogin)
 
             })
             .catch((error) => {
-                if (error.responde.status == "401")
-                    alert("ERROR 401: Credenciales Incorrectas")
+                alert("Error: Fallo en el registro")
             })
         }
     }
