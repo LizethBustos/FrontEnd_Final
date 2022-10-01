@@ -3,9 +3,9 @@
     <div class="header">
       <h1>Tu Tienda</h1>
       <nav v-if="is_auth">
-        <button>Inicio</button>
-        <button>Cuenta</button>
-        <button>Cerrar sesión</button>        
+        <button @click="loadHome">Inicio</button>
+        <button >Cuenta</button>
+        <button @click="logout">Cerrar sesión</button>        
       </nav>
 
       <nav v-else> 
@@ -44,6 +44,10 @@ export default {
   methods: {
     verifyAuth: function(){
       this.is_auth = localStorage.getItem("isAuth") || false;
+      if(this.is_auth)
+        this.$router.push({name:"home"})
+      else
+        this.$router.push({name:"Login"})
     },
     loadLogin: function(){
       this.$router.push({name:"Login"})
@@ -51,8 +55,16 @@ export default {
     loadSignUp: function(){
       this.$router.push({name:"SignUp"})
     },
+    loadHome: function(){
+      this.$router.push({name:"home"})
+    },
+    logout: function(){
+      localStorage.clear();
+      alert("Sesion Cerrada");
+    },
     loadProductos: function(){
       this.$router.push({name:"Productos"})
+      this.verifyAuth();
     },
     completedLogin: function(data) {
       localStorage.setItem("isAuth", true);
