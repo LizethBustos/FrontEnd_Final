@@ -61,10 +61,11 @@ export default {
     logout: function(){
       localStorage.clear();
       alert("Sesion Cerrada");
+      this.is_auth= false,
+      this.$router.push({name:"Login"})
     },
     loadProductos: function(){
       this.$router.push({name:"Productos"})
-      this.verifyAuth();
     },
     completedLogin: function(data) {
       localStorage.setItem("isAuth", true);

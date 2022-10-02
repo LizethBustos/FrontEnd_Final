@@ -43,7 +43,7 @@ export default {
                     token_refresh: res.data.refresh,
                 }
 
-                //this.$emit('completedLogin', dataLogin)
+                //this.$emit('completedLogin', dataLogin)arreglar
 
             })
             .catch((error) => {
