@@ -34,6 +34,6 @@
     .greetings span{
         color: crimson;
         font-weight: bold;
-    }
+    } 
 
 </style>
