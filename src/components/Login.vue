@@ -103,5 +103,5 @@ export default {
     background: #c6c6c6;
     border: 1px solid #283747;
 }
-
+ 
 </style>
